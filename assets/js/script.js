@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function updateStep() {
-    stepsContainer.style.transform = `translateX(-${currentStep * 349}px)`;
+    stepsContainer.style.transform = `translateX(-${currentStep * 350}px)`;
     updateDots();
     if (currentStep >= steps.length - 1) {
       skipButton.style.display = "none";
