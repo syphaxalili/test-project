@@ -1,0 +1,369 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============== Start Variables ===============*/
+:root {
+  --color-green: #26cf6f;
+  --color-gray: #797979;
+  --color-black: #000000;
+  --font-family-fa: "Font Awesome 5 Free";
+  --font-family-alata: "Alata", sans-serif;
+  --font-family-antic: "Antic", sans-serif;
+}
+
+/* =============== Start Global Rules ===============*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-antic);
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button {
+  display: block;
+  outline: none;
+  border: none;
+}
+
+.container {
+  height: 100vh;
+  overflow-y: auto;
+  width: 350px;
+  padding-inline: 30px;
+  padding-block: 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+/* =============== End Global Rules ===============*/
+
+/* =============== Start Reusable elements ===============*/
+.input-text {
+  padding: 5px 0;
+  font-family: var(--font-family-antic);
+  font-size: 1rem;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.green-action-button {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: var(--color-green);
+  color: white;
+  font-family: var(--font-family-alata);
+  font-size: 1rem;
+}
+
+.green-action-button:hover {
+  cursor: pointer;
+}
+
+.footer-connection {
+  text-align: center;
+  color: var(--color-gray);
+}
+
+.footer-connection p:last-of-type {
+  font-family: var(--font-family-alata);
+  font-size: 1.1rem;
+  color: var(--color-black);
+}
+
+.container form .accept-terms {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.container form .accept-terms > input[type="checkbox"] {
+  display: inline-block;
+}
+
+.container form .accept-terms > label {
+  font-size: 13px;
+  color: var(--color-gray);
+}
+
+.container form .accept-terms > label span {
+  text-decoration: underline;
+}
+
+.container form .accept-terms > input:checked + label {
+  color: var(--color-black);
+}
+/* =============== End Reusable elements ===============*/
+
+/* =============== Start onBoarding screen ===============*/
+.container.onBoarding {
+  position: relative;
+  overflow: hidden;
+}
+
+.container.onBoarding img {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.container.onBoarding .steps {
+  width: 300%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 700ms ease;
+}
+
+.container.onBoarding .steps .step {
+  width: 100%;
+}
+
+.container.onBoarding .steps .step .text {
+  padding: 0 30px;
+}
+
+.container.onBoarding .steps .step .text h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.container.onBoarding .actions {
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container.onBoarding .actions > a {
+  font-family: var(--font-family-alata);
+  color: #A5A5A5;
+} 
+
+.container.onBoarding .actions .dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  /* transition: all 2s ease-in; */
+}
+
+.container.onBoarding .actions .dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #D6D6D6;
+  transition: all 300ms ease-in;
+}
+
+.container.onBoarding .actions .dots span.active {
+  background-color: var(--color-green);
+}
+
+.container.onBoarding .actions .next-button {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-green);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.container.onBoarding .actions .next-button i {
+  font-size: 0.9rem;
+}
+
+/* =============== End onBoarding screen ===============*/
+
+
+/* =============== Start login screen ===============*/
+.container.login img {
+  width: 15rem;
+  margin-bottom: 2.5rem;
+}
+
+.container.login form {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container.login form .login-inputs {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container.login form .login-inputs > input {
+  margin-bottom: 1rem;
+}
+
+.container.login form a {
+  align-self: flex-end;
+  font-family: var(--font-family-alata);
+  font-size: 0.9rem;
+  color: var(--color-black);
+}
+/* =============== End login screen ===============*/
+
+/* =============== Start Je suis... ===============*/
+.container.jesuis img {
+  width: 8rem;
+  margin-bottom: 2.5rem;
+}
+
+.container.jesuis h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.container.jesuis .links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+/* =============== End Je suis... ===============*/
+
+/* =============== Start Signup SD ===============*/
+.container.signupsd img {
+  width: 8rem;
+  margin-bottom: 2.5rem;
+}
+
+.container.signupsd form {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container.signupsd form .login-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.container.signupsd form .login-inputs > input {
+  margin-bottom: 0.5rem;
+}
+
+.container.signupsd form > p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.container.signupsd form > p:first-of-type {
+  margin-bottom: 10px;
+}
+
+.container.signupsd form > p:last-of-type {
+  font-family: var(--font-family-alata);
+  margin-bottom: 1.5rem;
+}
+/* =============== End Signup SD ===============*/
+
+/* =============== Start Signup Restaurateur ===============*/
+.container.signuprestaurateur img {
+  width: 8rem;
+  margin-bottom: 2.5rem;
+}
+
+.container.signuprestaurateur form {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container.signuprestaurateur form .login-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.container.signuprestaurateur form .login-inputs > input {
+  margin-bottom: 0.5rem;
+}
+
+.container.signuprestaurateur form > p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.container.signuprestaurateur form > p:first-of-type {
+  margin-bottom: 10px;
+}
+
+.container.signuprestaurateur form > p:last-of-type {
+  font-family: var(--font-family-alata);
+  margin-bottom: 1.5rem;
+}
+/* =============== End Signup Restaurateur ===============*/
+
+/* =============== Start Signup Benevole ===============*/
+.container.signupbenevole img {
+  width: 8rem;
+  margin-bottom: 2.5rem;
+}
+
+.container.signupbenevole form {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container.signupbenevole form .login-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.container.signupbenevole form .login-inputs > input {
+  margin-bottom: 0.5rem;
+}
+
+.container.signupbenevole form > p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.container.signupbenevole form > p:first-of-type {
+  margin-bottom: 10px;
+}
+
+.container.signupbenevole form > p:last-of-type {
+  font-family: var(--font-family-alata);
+  margin-bottom: 1.5rem;
+}
+/* =============== End Signup Benevole ===============*/

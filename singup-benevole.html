@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up bénévole</title>
+    <!-- Style CSS File -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Alata Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Antic Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container signupbenevole">
+      <img src="assets/imgs/logo_vertical.png" alt="logo image" />
+      <form action="">
+        <div class="login-inputs">
+          <input
+            class="input-text"
+            type="text"
+            placeholder="Nom complet"
+            required
+          />
+          <input
+            class="input-text"
+            type="email"
+            placeholder="Adresse mail"
+            required
+          />
+          <input
+            class="input-text"
+            type="email"
+            placeholder="Confirmer adresse mail"
+            required
+          />
+          <input
+            class="input-text"
+            type="password"
+            placeholder="Mot de passe"
+            required
+          />
+          <input
+            class="input-text"
+            type="password"
+            placeholder="Confirmer mot de passe"
+            required
+          />
+          <input
+            class="input-text"
+            type="text"
+            placeholder="Telephone"
+            required
+          />
+        </div>
+        <p>Tous les champs sont obligatoires</p>
+        <p>Nous enverrons un mail de vérification</p>
+        <div class="accept-terms">
+          <input type="checkbox" name="conditions" id="conditions" required />
+          <label for="conditions"
+            >J’accepte les
+            <span>conditions générales d’utilisation</span></label
+          >
+        </div>
+        <input class="green-action-button" type="submit" value="S'inscrire" />
+      </form>
+      <a href="signin.html" class="footer-connection">
+        <p>J’ai déjà un compte</p>
+        <p>Se connecter</p>
+      </a>
+    </div>
+  </body>
+</html>
